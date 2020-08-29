@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Router } from 'react-router'
 import { Provider } from 'react-redux'
 import store from './redux/reducers'
 import 'bootstrap/dist/css/bootstrap.min.css'

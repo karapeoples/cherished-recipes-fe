@@ -10,7 +10,7 @@ const Routes = () => {
 
   return (
     <>
-    <ProtectedRoute exact path='user-dash' component={Dashboard}/>
+    <ProtectedRoute exact path='user-dash/:id' component={Dashboard}/>
     <Route exact path='/' component={LandingPage} />
     <Route exact path='/register' component={Register} />
     <Route exact path='/login' component={Login} />
