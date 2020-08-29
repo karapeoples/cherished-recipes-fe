@@ -13,4 +13,29 @@
   color: white;
 }
 
+.nav-flex{
+  display:flex;
+  justify-content:space-between;
+  width: 100%;
+}
+.nav-flex h1{
+  margin: 1%;
+}
+.nav-flex div{
+  margin: 1%;
+}
+.register-form,.login-form{
+  width: 50%;
+  margin: 0 auto;
+  display:flex;
+  flex-direction:column;
+}
 
+.register-form input{
+  margin: .5% 0;
+  text-align: center;
+}
+.login-form input{
+  margin: .5% 0;
+  text-align: center;
+}
