@@ -11,8 +11,8 @@ const Routes = () => {
 
   return (
     <>
-      <ProtectedRoute path='/user-dash/:id' component={Dashboard} />
-      <ProtectedRoute path ='/addRecipe' component={AddRecipe}/>
+    <ProtectedRoute path='/user-dash/:id' component={Dashboard} />
+    <ProtectedRoute path ='/addRecipe' component={AddRecipe}/>
     <Route exact path='/' component={LandingPage} />
     <Route  path='/register' component={Register} />
     <Route  path='/login' component={Login} />

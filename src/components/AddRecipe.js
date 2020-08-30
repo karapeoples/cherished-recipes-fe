@@ -6,7 +6,7 @@ import {postNewRecipe} from '../redux/actions'
 
 const AddRecipe = () => {
 const id = localStorage.getItem('user_id')
- const dispatch = useDispatch()
+const dispatch = useDispatch()
 const recipeObj = {
 		image: '',
 		title: '',

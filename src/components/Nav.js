@@ -13,7 +13,7 @@ const Nav = () => {
 			<div className='App-header'>
 				{url.match(/user-dash/gi) || url.match(/addRecipe/) ? (
 					<section className='nav-flex'>
-						<h1>Logo Here</h1>
+						<h1><i>SFR</i></h1>
 						<div>
 							<Link to='/addRecipe'>
 								<button>Add Recipe</button>
@@ -23,7 +23,7 @@ const Nav = () => {
 					</section>
 				) : (
 					<section className='nav-flex'>
-						<h1>Logo Here</h1>
+						<h1><i>SFR</i></h1>
 						<div>
 							<Link to='/register'>
 								<button>Register</button>

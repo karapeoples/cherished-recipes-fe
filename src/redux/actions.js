@@ -5,6 +5,7 @@ export const POST_NEW_USER = 'POST_NEW_USER'
 export const LOGIN = 'LOGIN'
 export const GET_RECIPES = 'GET_RECIPES'
 export const POST_NEW_RECIPE = 'POST_NEW_RECIPE'
+export const UPDATE_RECIPE = 'UPDATE_RECIPE'
 export const SET_ERROR = 'SET_ERROR'
 
 
@@ -62,3 +63,18 @@ export const postNewRecipe = (newRecipe) => dispatch => {
 			dispatch({ type: SET_ERROR, payload: 'error adding the recipe' })
 		})
 }
+
+export const editRecipe = (editedRecipe) => (dispatch) => {
+	axiosWithAuth()
+		.put(`/recipes/${editedRecipe.id}`, editedRecipe)
+		.then((response) => {
+			console.log(response)
+			dispatch({ type: UPDATE_RECIPE, payload: response.data })
+		})
+		.catch((err) => {
+			console.log('Oops Error', err)
+			dispatch({ type: SET_ERROR, payload: 'error updating the recipe' })
+		})
+}
+
+

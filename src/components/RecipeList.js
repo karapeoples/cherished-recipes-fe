@@ -18,7 +18,7 @@ useEffect(() => {
     <div>
       {allRecipes.map((info,index) => {
         return(
-            <RecipeCard key={index} img={info.image} title={info.title} source={info.source} ingredients={info.ingredients} instructions={info.instructions} cat={info.category}/>
+            <RecipeCard key={index} id={info.id} img={info.image} title={info.title} source={info.source} ingredients={info.ingredients} instructions={info.instructions} cat={info.category}/>
       )})}
 
     </div>

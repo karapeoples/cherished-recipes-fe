@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import {SET_ERROR, GET_RECIPES, POST_NEW_RECIPE} from './actions'
+import {SET_ERROR, GET_RECIPES, POST_NEW_RECIPE, UPDATE_RECIPE} from './actions'
 
 const initialState = {
 	recipes: [],
@@ -17,9 +17,20 @@ const reducer = (state = initialState, action) => {
 		case POST_NEW_RECIPE: {
 			return {
 				...state,
-				recipes: [...state.recipes, action.payload]
+				recipes: [...state.recipes, action.payload],
 			}
 		}
+		case UPDATE_RECIPE:
+			return {
+				...state,
+				recipes: state.recipes.map((recipe) => {
+					if (recipe.id === action.payload.id) {
+						return action.payload
+					} else {
+						return recipe
+					}
+				}),
+			}
 		case SET_ERROR:
 			return {
 				...state,
