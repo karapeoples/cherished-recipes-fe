@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Nav from './Nav'
 import {useDispatch} from 'react-redux'
 import {login} from '../redux/actions'
 
@@ -26,6 +27,7 @@ const Login = () => {
 		}
   return (
     <div>
+    <Nav/>
       <form className='login-form' onSubmit={handleSubmit}>
         <input name='username' value={creds.username} onChange={handleChange}type="text" placeholder="Username"/>
         <input name='password' value={creds.password} onChange={handleChange} type="text" placeholder="Password" />

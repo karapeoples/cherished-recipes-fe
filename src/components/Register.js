@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import Nav from './Nav'
 import { useDispatch } from 'react-redux'
 import {postNewUser} from '../redux/actions'
 
@@ -27,7 +28,8 @@ const Register = () => {
   }
 
   return (
-			<div>
+    <div>
+      <Nav/>
 				<form className='register-form' onSubmit={handleSubmit}>
 					<input required name='name' value={user.name} type='text' placeholder='Name' onChange={handleChange} />
 					<input required name='username' value={user.username} type='text' placeholder='UserName' onChange={handleChange} />

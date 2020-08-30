@@ -5,15 +5,17 @@ import Dashboard from '../components/Dashboard'
 import Register from '../components/Register'
 import Login from '../components/Login'
 import LandingPage from '../components/LandingPage'
+import AddRecipe from '../components/AddRecipe'
 
 const Routes = () => {
 
   return (
     <>
-    <ProtectedRoute exact path='user-dash/:id' component={Dashboard}/>
+      <ProtectedRoute path='/user-dash/:id' component={Dashboard} />
+      <ProtectedRoute path ='/addRecipe' component={AddRecipe}/>
     <Route exact path='/' component={LandingPage} />
-    <Route exact path='/register' component={Register} />
-    <Route exact path='/login' component={Login} />
+    <Route  path='/register' component={Register} />
+    <Route  path='/login' component={Login} />
   </>
   )
 }
